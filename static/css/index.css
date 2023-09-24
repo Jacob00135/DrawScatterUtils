@@ -1,0 +1,62 @@
+body {
+	margin: 0;
+	padding-top: 50px;
+}
+
+/* 导航栏 */
+#nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 50px;
+	background-color: #eeeeee;
+	box-shadow: 0 0 10px 1px rgba(0, 0, 0, .3);
+}
+
+#nav ul {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#nav ul > li {
+	float: left;
+	height: 100%;
+	list-style: none;
+}
+
+#nav ul > li > a {
+	display: block;
+	height: 100%;
+	padding: 0 15px;
+	text-decoration: none;
+	line-height: 50px;
+	color: #000000;
+	cursor: pointer;
+}
+
+#nav ul > li > a:hover {
+	background-color: #cccccc;
+}
+
+/* 图片列表 */
+#image-list {
+	padding: 50px;
+}
+
+#image-list > img {
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+	box-shadow: 0 0 20px 1px rgba(0, 0, 0, .2);
+}
+
+#image-list > img:nth-child(n + 2) {
+	margin-top: 50px;
+}
+
+#image-list > .legend {
+	text-align: center;
+	font-family: "Consolas";
+	font-size: 20px;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>查看图片</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}" />
+</head>
+<body>
+    <div id="nav">
+        <ul>
+            <li>
+                <a href="{{ url_for('index', graph_type='whole') }}">完整图</a>
+            </li>
+            <li>
+                <a href="{{ url_for('index', graph_type='magnify') }}">放大图</a>
+            </li>
+            <li>
+                <a href="{{ url_for('index', graph_type='subgraph') }}">对比图</a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="image-list">
+        {% for fn in filename_list %}
+        <img src="{{ url_for('static', filename='images/{}'.format(fn)) }}" title="{{ fn }}" />
+        <div class="legend">{{ fn }}</div>
+        {% endfor %}
+    </div>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='js/index.js') }}"></script>
+</body>
+</html>
